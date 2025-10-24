@@ -16,14 +16,10 @@ USER = {
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    try:
-        if session['user']:
-            return render_template('index.html')
-        else:
-            return redirect(url_for('login'))
-    except:
+    if not session['user']:
         return redirect(url_for('login'))
-        
+    else:
+        return render_template('index.html')
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
