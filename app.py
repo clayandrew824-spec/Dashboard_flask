@@ -13,7 +13,7 @@ USER = {
     "address": "1234 Elm Street, Houston, TX, USA"
 }
 
-@app.route('/', methods=['POST', 'GET')
+@app.route('/', methods=['POST', 'GET'])
 def index():
     try:
         if session['user']:
