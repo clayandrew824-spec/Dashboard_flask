@@ -56,7 +56,17 @@
 
     <!-- Divider -->
     <div class="flex items-center justify-center my-5">
-      <div class="border-t border-[#1c2b5c] w-1/4"></div>
+      <div class="border-t border-[#1c2b5c] w-1/4">{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div id="flash-messages">
+      {% for category, message in messages %}
+        <div class="flash {{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}</div>
       <div class="border-t border-[#1c2b5c] w-1/4"></div>
     </div>
 
