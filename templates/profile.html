@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile | Savings App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #0b1736;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex justify-center px-4 md:px-0">
+
+  <!-- Main Container -->
+  <div class="w-full max-w-sm md:max-w-lg bg-[#101f46] rounded-2xl p-8 shadow-lg mt-10 mb-10">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-6">
+      <a href="{{ url_for('/') }}"> <button class="text-2xl hover:text-blue-400 transition">&#8592;</button></a>
+      <h1 class="text-lg md:text-2xl font-semibold flex-1 text-center">User Profile</h1>
+      <div class="w-8"></div>
+    </div>
+
+    <!-- Profile Picture -->
+    <div class="flex flex-col items-center mb-8">
+      <div class="relative">
+        <div class="w-24 h-24 rounded-full bg-[#132654] flex items-center justify-center text-4xl text-yellow-400">
+          👤
+        </div>
+      </div>
+      <h2 class="mt-3 text-xl font-semibold">Daniel Deadman</h2>
+      <p class="text-gray-400 text-sm">dan_deadman@live.co.uk</p>
+    </div>
+
+    <!-- Profile Info -->
+    <form class="space-y-5">
+      
+      <!-- Full Name -->
+      <div>
+        <label class="block text-sm mb-1 text-gray-300">Full Name</label>
+        <input readonly type="text" value="Daniel Deadman"
+               class="w-full bg-[#132654] border border-[#1f2f6b] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400">
+      </div>
+
+      <!-- Date of Birth -->
+      <div>
+        <label class="block text-sm mb-1 text-gray-300">Date of Birth</label>
+        <input readonly type="date" value="1988-09-29"
+               class="w-full bg-[#132654] border border-[#1f2f6b] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400">
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm mb-1 text-gray-300">Email Address</label>
+        <input readonly type="email" value="dan_deadman@live.co.uk"
+               class="w-full bg-[#132654] border border-[#1f2f6b] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400">
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label class="block text-sm mb-1 text-gray-300">Phone Number</label>
+        <input readonly type="tel" value="+447598218140"
+               class="w-full bg-[#132654] border border-[#1f2f6b] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400">
+      </div>
+
+      <!-- Address -->
+      <div>
+        <label class="block text-sm mb-1 text-gray-300">Residential Address</label>
+        <textarea readonly rows="2"
+                  class="w-full bg-[#132654] border border-[#1f2f6b] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400">25 Grebe Drive Rochford Essex</textarea>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

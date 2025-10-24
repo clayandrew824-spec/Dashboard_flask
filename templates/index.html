@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trades Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #0b1736;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex justify-center">
+
+  <!-- Main Container -->
+  <div class="w-full max-w-md md:max-w-3xl lg:max-w-4xl px-4 md:px-10 py-6">
+
+    <!-- Header -->
+    <div class="flex items-center gap-3 mb-6">
+      <button class="text-2xl md:text-3xl hover:text-blue-400 transition">BCI</button>
+      <h1 class="flex-1 text-center text-lg md:text-2xl font-semibold">Trades Details</h1>
+    </div>
+
+    <!-- Trades Card -->
+    <div class="bg-[#101f46] rounded-2xl p-6 md:p-8 shadow-lg">
+      <div class="flex justify-between items-start md:items-center">
+        <div>
+          <h2 class="text-gray-300 text-sm md:text-base">Daniel Deadman</h2>
+          <span class="text-xs md:text-sm text-blue-400 font-medium">Flexible Trades</span>
+        </div>
+        <div class="w-12 h-12 bg-[#132654] flex items-center justify-center rounded-full">
+          <a href="{{ url_for('profile') }}"><span class="text-yellow-400 text-2xl">👤</span></a>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <h1 class="text-4xl md:text-5xl font-bold">ETH0.091</h1>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between mt-4 border-t border-[#1c2b5c] pt-4 gap-4">
+        <div>
+          <p class="text-green-400 text-sm md:text-base">ETH0.046</p>
+          <p class="text-xs md:text-sm text-gray-400">Total Profit Accrued</p>
+        </div>
+        <div>
+          <p class="text-green-400 text-sm md:text-base">ETH0.046</p>
+          <p class="text-xs md:text-sm text-gray-400">Withdrawable Profit</p>
+        </div>
+      </div>
+
+      <div class="mt-5 space-y-3 text-sm md:text-base text-gray-300">
+        <div class="flex justify-between">
+          <span>Next Contribution</span>
+          <span class="text-yellow-400 font-medium">2025-10-24 18:00</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Maturity Date</span>
+          <span class="text-yellow-400 font-medium">2025-10-27 9:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Transactions -->
+    <div class="mt-10">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="text-gray-300 text-sm md:text-base font-medium">Recent Transactions</h2>
+        <a href="#" class="text-blue-400 text-xs md:text-sm hover:underline"></a>
+      </div>
+
+      <div class="space-y-3">
+
+        <!-- Transaction Item -->
+        <div class="bg-[#101f46] rounded-xl p-4 flex justify-between items-center hover:bg-[#15265c] transition">
+          <div class="flex items-center space-x-3">
+            <div class="bg-[#132654] w-7 h-7 flex items-center justify-center rounded-full text-yellow-400 text-sm">%</div>
+            <div>
+              <p class="text-green-400 text-sm md:text-base font-medium">+ETH0.00003</p>
+              <p class="text-xs md:text-sm text-gray-400">Profit Accrual | 2025-10-24</p>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-gray-400">10:34</span>
+        </div>
+
+        <!-- Transaction Item -->
+        <div class="bg-[#101f46] rounded-xl p-4 flex justify-between items-center hover:bg-[#15265c] transition">
+          <div class="flex items-center space-x-3">
+            <div class="bg-[#132654] w-7 h-7 flex items-center justify-center rounded-full text-yellow-400 text-sm">%</div>
+            <div>
+              <p class="text-green-400 text-sm md:text-base font-medium">ETH0.00098</p>
+              <p class="text-xs md:text-sm text-gray-400">Withdrawal | 2025-10-24</p>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-gray-400">9:23</span>
+        </div>
+
+        <!-- Transaction Item -->
+        <div class="bg-[#101f46] rounded-xl p-4 flex justify-between items-center hover:bg-[#15265c] transition">
+          <div class="flex items-center space-x-3">
+            <div class="bg-[#132654] w-7 h-7 flex items-center justify-center rounded-full text-yellow-400 text-sm">%</div>
+            <div>
+              <p class="text-green-400 text-sm md:text-base font-medium">+ETH0.00023</p>
+              <p class="text-xs md:text-sm text-gray-400">Profit Accrual | 2025-10-23</p>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-gray-400">16:15</span>
+        </div>
+        
+                <!-- Transaction Item -->
+        <div class="bg-[#101f46] rounded-xl p-4 flex justify-between items-center hover:bg-[#15265c] transition">
+          <div class="flex items-center space-x-3">
+            <div class="bg-[#132654] w-7 h-7 flex items-center justify-center rounded-full text-yellow-400 text-sm">%</div>
+            <div>
+              <p class="text-green-400 text-sm md:text-base font-medium">+ETH0.00045</p>
+              <p class="text-xs md:text-sm text-gray-400">Profit Accrual | 2025-10-23</p>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-gray-400">16:05</span>
+        </div>
+        
+                <!-- Transaction Item -->
+        <div class="bg-[#101f46] rounded-xl p-4 flex justify-between items-center hover:bg-[#15265c] transition">
+          <div class="flex items-center space-x-3">
+            <div class="bg-[#132654] w-7 h-7 flex items-center justify-center rounded-full text-yellow-400 text-sm">%</div>
+            <div>
+              <p class="text-green-400 text-sm md:text-base font-medium">+ETH0.00062</p>
+              <p class="text-xs md:text-sm text-gray-400">Profit Accrual | 2025-10-23</p>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-gray-400">15:59</span>
+        </div>
+        
+                <!-- Transaction Item -->
+        <div class="bg-[#101f46] rounded-xl p-4 flex justify-between items-center hover:bg-[#15265c] transition">
+          <div class="flex items-center space-x-3">
+            <div class="bg-[#132654] w-7 h-7 flex items-center justify-center rounded-full text-yellow-400 text-sm">%</div>
+            <div>
+              <p class="text-green-400 text-sm md:text-base font-medium">+ETH0.00092</p>
+              <p class="text-xs md:text-sm text-gray-400">Profit Accrual | 2025-10-23</p>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-gray-400">15:47</span>
+        </div>
+        
+                <!-- Transaction Item -->
+        <div class="bg-[#101f46] rounded-xl p-4 flex justify-between items-center hover:bg-[#15265c] transition">
+          <div class="flex items-center space-x-3">
+            <div class="bg-[#132654] w-7 h-7 flex items-center justify-center rounded-full text-yellow-400 text-sm">%</div>
+            <div>
+              <p class="text-green-400 text-sm md:text-base font-medium">+ETH0.00051</p>
+              <p class="text-xs md:text-sm text-gray-400">Profit Accrual | 2025-10-23</p>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-gray-400">15:31</span>
+        </div>
+        
+                <!-- Transaction Item -->
+        <div class="bg-[#101f46] rounded-xl p-4 flex justify-between items-center hover:bg-[#15265c] transition">
+          <div class="flex items-center space-x-3">
+            <div class="bg-[#132654] w-7 h-7 flex items-center justify-center rounded-full text-yellow-400 text-sm">%</div>
+            <div>
+              <p class="text-green-400 text-sm md:text-base font-medium">+ETH0.00054</p>
+              <p class="text-xs md:text-sm text-gray-400">Profit Accrual | 2025-10-23</p>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-gray-400">15:23</span>
+        </div>
+        
+                <!-- Transaction Item -->
+        <div class="bg-[#101f46] rounded-xl p-4 flex justify-between items-center hover:bg-[#15265c] transition">
+          <div class="flex items-center space-x-3">
+            <div class="bg-[#132654] w-7 h-7 flex items-center justify-center rounded-full text-yellow-400 text-sm">%</div>
+            <div>
+              <p class="text-green-400 text-sm md:text-base font-medium">+ETH0.00032</p>
+              <p class="text-xs md:text-sm text-gray-400">Profit Accrual | 2025-10-23</p>
+            </div>
+          </div>
+          <span class="text-xs md:text-sm text-gray-400">15:01</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

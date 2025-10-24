@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Trading App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #0b1736;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center px-4 md:px-0">
+
+  <!-- Main Container -->
+  <div class="w-full max-w-sm md:max-w-md bg-[#101f46] rounded-2xl p-8 shadow-lg">
+
+    <!-- Header / Branding -->
+    <div class="text-center mb-6">
+      <div class="flex justify-center mb-2">
+        <div class="bg-[#132654] w-14 h-14 flex items-center justify-center rounded-full">
+          <span class="text-yellow-400 text-3xl">👤</span>
+        </div>
+      </div>
+      <h1 class="text-2xl md:text-3xl font-semibold">Welcome</h1>
+      <p class="text-gray-400 text-sm mt-1">Login to your Trading account</p>
+    </div>
+
+    <!-- Login Form -->
+    <form class="space-y-5" method="POST" action="{{ url_for('login') }}">
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm mb-1 text-gray-300">Email</label>
+        <input id="email" type="email" placeholder="you@example.com"
+               class="w-full bg-[#132654] border border-[#1f2f6b] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400">
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block text-sm mb-1 text-gray-300">Password</label>
+        <input id="password" type="password" placeholder="••••••••"
+               class="w-full bg-[#132654] border border-[#1f2f6b] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400">
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit"
+              class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 rounded-xl transition">
+        Login
+      </button>
+
+    </form>
+
+    <!-- Divider -->
+    <div class="flex items-center justify-center my-5">
+      <div class="border-t border-[#1c2b5c] w-1/4"></div>
+      <div class="border-t border-[#1c2b5c] w-1/4"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
