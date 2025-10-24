@@ -15,10 +15,14 @@ USER = {
 
 @app.route('/')
 def index():
-    if session['user']:
-        return render_template('index.html')
-    else:
+    try:
+        if session['user']:
+            return render_template('index.html')
+        else:
+            return redirect(url_for('login'))
+    except:
         return redirect(url_for('login'))
+        
 
 @app.route('/login')
 def login():
@@ -38,9 +42,12 @@ def login():
 
 @app.route('/profile')
 def profile():
-    if session['user']:
-        return render_template('profile.html')
-    else:
+    try:
+        if session['user']:
+            return render_template('profile.html')
+        else:
+            return redirect(url_for('login'))
+    except:
         return redirect(url_for('login'))
 
 if __name__ == '__main__':
