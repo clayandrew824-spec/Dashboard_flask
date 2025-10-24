@@ -13,7 +13,7 @@ USER = {
     "address": "1234 Elm Street, Houston, TX, USA"
 }
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET')
 def index():
     try:
         if session['user']:
@@ -24,7 +24,7 @@ def index():
         return redirect(url_for('login'))
         
 
-@app.route('/login')
+@app.route('/login', methods=['POST', 'GET'])
 def login():
     """Login page"""
     if request.method == 'POST':
@@ -40,7 +40,7 @@ def login():
 
     return render_template('login.html')
 
-@app.route('/profile')
+@app.route('/profile', methods=['POST', 'GET'])
 def profile():
     try:
         if session['user']:
