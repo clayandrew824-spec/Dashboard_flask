@@ -34,8 +34,7 @@ def login():
 
         if email == USER['email'] and password == USER['password']:
             session['user'] = USER  # store user data in session
-            flash('Login successful!', 'success')
-            return redirect(url_for('/'))
+            return redirect(url_for('index'))
         else:
             flash('Invalid email or password', 'error')
 
